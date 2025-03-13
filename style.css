@@ -15,11 +15,11 @@ main {
     height: 100vh;
     margin: 0 auto;
     padding: 2rem;
-    background-color: #dfdfdf;
+    background-color: #616161;
 }
 
 header {
-    background-color: #302f2f;
+    background-color: #ffffff;
     padding: 1rem 2rem;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.336);
     display: flex;
@@ -37,17 +37,30 @@ header {
     justify-content: center;
 }
 
-.nav-container ul li ul {
+.nav-container ul li .sub-menu1 {
     display: none;
     position: absolute;
-    background-color: #302f2f;
+    background-color: #fdfdfd;
     padding: 20px;
-    margin-top: 40px; 
+    margin-top: 27px; 
+    min-width: 330px;
+    max-width: 330px;
     
 }
 
+.nav-container ul li .sub-menu2 {
+    display: none;
+    position: absolute;
+    background-color: #fdfdfd;
+    padding: 20px;
+    margin-top: 27px; 
+    min-width: 180px;
+    
+}
+
+
 .nav-container ul li ul li a {
-    color: #ffffff;
+    color: #070707;
     font-size: 10px;
     font-family: 'Coca-Cola';
     font-weight: 700;
@@ -62,10 +75,9 @@ header {
     margin-right: 600px;
     
 }
-
 .nav-container a {
     text-decoration: none;
-    color: #ffffff;
+    color: #070707;
     font-size: 1rem;
     font-family: 'Coca-Cola';
     font-weight: 700;
@@ -77,16 +89,30 @@ header {
 }
 
 .nav-container a:hover {
-    padding-bottom: 50px;
+    padding-bottom: 25px;
 }
+.nav-container > ul > li > a {
+    position: relative;
+}
+.nav-container > ul > li > a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Ajusta la distancia desde el texto */
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #000000;
+}
+
 
 .nav-container a:hover i {
     transform: rotate(90deg);
     transition: all 0.3s ease;
 }
 
-.nav-container ul li ul li a:hover {
+.nav-container ul li ul li:hover a {
     font-size: 12px;
+    font-weight: 800;
 }
 
 
@@ -95,13 +121,13 @@ header {
 }
 
 .nav-container ul li ul i {
-    display: none;
-    transform: rotate(-90deg);
-}
-.nav-container ul li ul li a:hover i {
-    display: inline-block;
+    transform: none;
 }
 
+.nav-container ul li ul li a:hover i {
+    transform: none;
+    
+}
 
 .user-container {
     display: flex;
@@ -110,7 +136,73 @@ header {
 
 .user-container a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     font-size: 1.5rem;
+    position: relative;
 }
 
+.user-container i {
+    padding: 0px 0px 50px 50px;
+}
+
+.user-container .bi-list {
+    display: none;
+}
+
+
+.user-submenu {
+    display: none;
+    position: absolute;
+    background-color: #fdfdfd;
+    padding: 20px;
+    margin-top: 275px;
+    right: 60px;
+    width: 300px;
+    height: 200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+}
+.user-container:hover .user-submenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.user-submenu li {
+    margin-bottom: 10px;
+}
+
+.user-submenu .texto {
+    color: #030303;
+    font-size: 13px;
+    
+    font-family: "Coca-Cola";
+}
+
+.user-submenu button {
+    padding: 10px 100px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    font-family: 'Coca-Cola';
+    font-weight: 700;
+}
+
+
+.user-sub-menu button:hover {
+    background-color: #333333;
+}
+
+.user-submenu .register-btn {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+user-container .bi-list {
+    display: none;
+}

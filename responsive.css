@@ -1,0 +1,28 @@
+@media screen and (max-width: 1318px){
+    
+    .user-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .user-submenu {
+        opacity: 0;
+    }
+
+    .user-container .bi-person {
+        display: none;
+    }
+    .user-submenu {
+        display: none;
+    }
+    .user-container .bi-list {
+        display: block;
+        padding: 0;
+        
+    }
+
+    .nav-container ul {
+        display: none;
+    }
+}
